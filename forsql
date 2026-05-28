@@ -1,0 +1,17 @@
+CREATE TABLE users (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    fio VARCHAR(255),
+    phone VARCHAR(50),
+    email VARCHAR(100),
+    login VARCHAR(50) UNIQUE,
+    password VARCHAR(255)
+);
+
+CREATE TABLE applications (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    user_id INT,
+    course VARCHAR(255),
+    start_date VARCHAR(20),
+    payment VARCHAR(50),
+    status VARCHAR(50) DEFAULT 'Новая'
+);
